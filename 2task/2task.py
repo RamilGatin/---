@@ -58,7 +58,8 @@ class Lemma_Tokenizer:
         return True
 
     def check_for_rules_token(self, token):
-        if token.text not in self.nltk_stopwords \
+        if len(token.text) >= 3 \
+                and token.text not in self.nltk_stopwords \
                 and token.is_alpha \
                 and not token.like_num \
                 and not token.is_punct \
