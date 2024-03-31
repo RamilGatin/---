@@ -61,7 +61,7 @@ class Tf_Idf:
                 for lemmas in docs_lemmas[doc_id]:
                     tf = docs_lemmas[doc_id][lemmas] / len(docs_lemmas[doc_id])
                     idf = np.log10(len(lemmas_in_docs) / lemmas_in_docs[lemmas])
-                    file.write(f"{lemmas} {idf} {tf * idf} \n")
+                    file.write(f"{lemmas} {idf} {tf * idf}\n")
 
     @staticmethod
     def check_for_russia_letter(word):
